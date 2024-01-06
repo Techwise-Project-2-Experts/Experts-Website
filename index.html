@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Landing Page</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="front-pages.css" rel="stylesheet" />
+
+  <style>
+    .topbar {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 55%, 0% 90%);
+      height: 200px;
+      background-image: url("images/banner-img1.png");
+      background-size: 100% 100%;
+      opacity: .75;
+    }
+  </style>
 </head>
 
 <body>
-  Hello world
+  <header>
+    <div class="topbar">
+    </div>
+  </header>
+
+  <div class="main-container">
+    <h2>Bridging Minds, Building Answers</h2>
+    <section class="option-container">
+        <br>
+        <span class="new-member">New member?</span>
+        <button class="sign-up">Sign Up</button>
+
+        <br>
+
+        <span class="existing-member">Existing member?</span>
+        <button class="sign-in">Sign In</button>
+    </section>
+
+    <span class="offerings">Experts offers...</span>
+    <section class="offer-container">
+        <div class="flex-row-icons">
+            <div class="meeting-room"></div>
+            <div class="resume-icon"></div>
+            <div class="book-icon"></div>
+        </div>
+
+        <div class="flex-row-labels">
+            <span class="connecting">Connecting with industry experts.</span>
+            <span class="resume-help">Resume assistance.</span>
+            <span class="learning-help">Quick access to helpful learning resources.</span>
+        </div>
+    </section>
+  </div>
+  
   <script src="script.js"></script>
 
   <!--
