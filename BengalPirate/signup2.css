@@ -36,6 +36,31 @@ body, html {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+/*
+.password-container {
+  position: relative;
+  margin: 10px 0;
+}*/
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* Same as input height */
+  width: 40px; /* Square shape */
+}
+
+.toggle-password i {
+  font-size: 1em; /* Adjust icon size */
+}
+
 
 .signup-form button {
   width: 100%;
@@ -63,4 +88,9 @@ body, html {
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+
+.error-message {
+  color: white;
+  font-size: 0.8em;
 }
