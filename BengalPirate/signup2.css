@@ -1,0 +1,66 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #FFFFFF; /* Set the background to white */
+}
+
+.header-image-container {
+  width: 100%;
+  display: block; /* This ensures the div takes the full width */
+}
+
+.header-image {
+  width: 100%;
+  height: auto; /* Ensures the image is responsive and maintains aspect ratio */
+  display: block; /* This ensures the image takes the full width of its container */
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Fixed width */
+  padding: 40px;
+  background-color: #E94F1C;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #E94F1C;
+  cursor: pointer;
+}
+
+.agreement {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.login-prompt {
+  margin-top: 20px;
+}
+
+.login-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
