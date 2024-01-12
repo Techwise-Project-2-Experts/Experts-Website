@@ -1,0 +1,43 @@
+footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    background-color: rgba(226, 226, 226, 0.516);
+    width: 100vw;
+    margin-top: 10px;
+    height: 150px;
+    justify-items: start;
+}
+
+footer div {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    padding-block: 7px;
+    padding-left: 6px;
+}
+
+.no-underline {
+    text-decoration: none;
+    padding-bottom: 2px;
+    color: rgb(108, 108, 108);
+}
+
+#language-label {
+    color: rgb(108, 108, 108);
+}
+
+#language {
+    border-radius: 6px
+}
+
+#select-language {
+}
+
+@media (max-width: 800px) {
+    footer {
+        display: none;
+    }
+}
