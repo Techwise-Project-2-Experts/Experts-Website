@@ -1,0 +1,48 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(125, 206, 230, 0.75);
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#search_files {
+  text-align: center;
+}
+
+#search_files_bar {
+  width: 50%;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+}
+
+#create_area {
+  flex-direction: column;
+  margin: 20px;
+  text-align: center;
+}
+
+#create_button,
+#upload_button {
+  padding: 10px;
+  border-radius: 8px;
+  width: 20%;
+  font-size: 60%;
+  border: none;
+}
+
+#create_button {
+  margin-right: 20px;
+}
+
+#upload_button {
+  
+}
