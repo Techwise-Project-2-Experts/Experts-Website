@@ -37,6 +37,53 @@ body, html {
   border-radius: 4px;
 }
 
+* {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.password-container {
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  margin: 10px 0; /* Add some margin around the container */
+}
+
+.password-container input[type="password"]:active {
+  margin-right: 10px; /* Space between input and toggle button */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 4px; /* Rounded corners for the input */
+  outline: none; /* Removes the outline on focus */
+  transition: none; /* Disable transitions that might be causing a change in size */
+}
+
+.password-container input[type="password"]:focus {
+  outline: none;
+  border: 1px solid #ccc; /* Maintain the same border style on focus */
+  margin-right: 10px;
+  transition: none;
+}
+
+.toggle-password {
+  flex: 0 0 30px; /* Do not grow or shrink, set the basis to 30px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px; /* Set the height to maintain a square */
+  width: 30px; /* Set the width to maintain a square */
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none; /* Remove focus outline */
+}
+
+/* Ensure that pressing the button does not affect the input field size */
+.toggle-password:active,
+.toggle-password:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .login-form button {
   width: 100%;
   padding: 10px;

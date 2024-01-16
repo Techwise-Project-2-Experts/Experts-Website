@@ -41,15 +41,13 @@ body, html {
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-
 .password-container {
   display: flex; /* Enable flexbox layout */
   align-items: center; /* Align items vertically in the center */
   margin: 10px 0; /* Add some margin around the container */
 }
 
-.password-container input[type="password"] {
-  flex: 1; /* Flex grow to fill available space */
+.password-container input[type="password"]:active {
   margin-right: 10px; /* Space between input and toggle button */
   padding: 10px; /* Padding inside the input */
   border: 1px solid #ccc; /* Border for the input */
@@ -61,6 +59,8 @@ body, html {
 .password-container input[type="password"]:focus {
   outline: none;
   border: 1px solid #ccc; /* Maintain the same border style on focus */
+  margin-right: 10px;
+  transition: none;
 }
 
 .toggle-password {
@@ -83,9 +83,6 @@ body, html {
   outline: none;
   box-shadow: none;
 }
-
-
-
 
 .signup-form button {
   width: 100%;
