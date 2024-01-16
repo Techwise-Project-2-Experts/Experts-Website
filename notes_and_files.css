@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(125, 206, 230, 0.75);
+  background-color: rgba(125, 206, 230);
   color: #333;
 }
 
@@ -45,4 +45,19 @@ body, html {
 
 #upload_button {
   
+}
+
+#file_container {
+    width: 80%;
+    min-height: 500px;
+    background-color: white;
+    align-self: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+#file_container p {
+  text-align: center;
+  color: rgb(156, 156, 156);
+  font-size: 12px;
 }
