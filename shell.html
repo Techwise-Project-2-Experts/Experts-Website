@@ -14,7 +14,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./shell.css">
         <link 
         href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" 
         rel="stylesheet"
@@ -24,14 +23,87 @@
         rel="stylesheet" 
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <link rel="stylesheet" href="./shell.css">
+        <link rel="stylesheet" href="./utility.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        
-        
+        <header class="mdc-top-app-bar mdc-top-app-bar--prominent">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <a href="./index.html">
+                        <div id="experts-logo-div"></div>
+                    </a>
+                    <input id="search-bar" type="text" placeholder="Search..">
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <ul class="display-inline">
+                        <li class="header-icon-div">
+                            <a href="">
+                                <div class="header-icon-div">
+                                    <div class="mdc-touch-target-wrapper">
+                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons md-48">
+                                            <div class="mdc-icon-button__ripple">info</div>
+                                        </button>
+                                    </div>
+                                    <p class="header-icon-label"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="header-icon-div">
+                                    <div class="mdc-touch-target-wrapper">
+                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
+                                            <div class="mdc-icon-button__ripple">meeting_room</div>
+                                        </button>
+                                    </div>
+                                    <p class="header-icon-label"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="header-icon-div">
+                                    <div class="mdc-touch-target-wrapper">
+                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
+                                            <div class="mdc-icon-button__ripple">edit_note</div>
+                                        </button>
+                                    </div>
+                                    <p class="header-icon-label"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="header-icon-div">
+                                    <div class="mdc-touch-target-wrapper">
+                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
+                                            <div class="mdc-icon-button__ripple">person</div>
+                                        </button>
+                                    </div>
+                                    <p class="header-icon-label"></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="header-icon-div">
+                                    <div class="mdc-touch-target-wrapper">
+                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
+                                            <div class="mdc-icon-button__ripple">settings</div>
+                                        </button>
+                                    </div>
+                                    <p class="header-icon-label"></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </header>
         <footer>
             <div>
                 <a class="no-underline" href="">About</a>

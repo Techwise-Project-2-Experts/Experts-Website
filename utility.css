@@ -1,0 +1,8 @@
+.display-inline{
+    display: inline-flex;
+}
+
+.icon-size{
+    width: 64px;
+    height: 64px; 
+}
