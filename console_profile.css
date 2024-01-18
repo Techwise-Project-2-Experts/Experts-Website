@@ -18,7 +18,9 @@
   --card-padding: 1rem;
 }
 
-*, *::before, *::after{
+*, 
+*::before, 
+*::after{
   margin: 0;
   padding: 0;
   outline: 0;
@@ -63,7 +65,7 @@ img{
   font-size: 0.9rem;
 }
 
-.btn-hover{
+.btn:hover{
   opacity: 0.8;
 }
 
@@ -96,7 +98,7 @@ nav .container{
   justify-content: space-between;
 }
 
-nav.search-bar{
+nav .search-bar{
   background: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
@@ -112,4 +114,10 @@ nav .search-bar input[type="search"]{
 
 nav .search-bar input[type="search"]::placeholder{
   color: var(--color-gray);
+}
+
+nav .create{
+  display: flex;
+  aligh-items: center;
+  gap: 2rem;
 }
