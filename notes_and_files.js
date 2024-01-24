@@ -3,6 +3,7 @@ document.getElementById("upload-button").addEventListener("click", function () {
   document.getElementById("upload-popup").classList.add("show");
 });
 
+
 // hides popup when user clicks outside of it
 window.addEventListener("click", function (event) {
   var uploadPopup = document.getElementById("upload-popup");
@@ -11,10 +12,18 @@ window.addEventListener("click", function (event) {
   }
 });
 
+
 // hides popup if user clicks to cancel upload
 document.getElementById("cancel-drop").addEventListener("click", function () {
   document.getElementById("upload-popup").classList.remove("show");
 });
+
+
+document.getElementById("confirm-drop").addEventListener("click", function () {
+  // upon confirm -> file should appear in file storage area, added to server, + upload popup should hide
+  document.getElementById("upload-popup").classList.remove("show");
+})
+
 
 // for notes and files drop areas -- to allow for dragging and dropping
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
@@ -53,9 +62,9 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   });
 });
 
+
 // not fully working yet :( debugging statements are showing but image is not
 // after this is working -> make it so that images show on the files + the "no files" statement is gone, store files in server once that is set up
-
 function updateThumbnail(dropZoneElement, file) {
   console.log("Updating thumbnail for: ", file.name)
   let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");

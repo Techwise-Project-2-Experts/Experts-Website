@@ -63,10 +63,14 @@ body, html {
     
 }
 
-#cancel-drop {
+#cancel-drop,
+#confirm-drop {
+  width: 35%;
   border: 1px solid black;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
+  margin: 5px auto;
+  padding: 3px;
 }
 
 .popup {
@@ -103,7 +107,7 @@ body, html {
 
 .drop-zone {
   width: 60%;
-  height: 50%;
+  height: 60%;
   padding: 10px;
   margin: 10px auto;
   display: flex;
