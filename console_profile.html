@@ -1,32 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width">
   <title>Console</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="shell.css">
+  <meta name="viewport" content="width=device-width, initial -scale=1.0">
+  <title>Experts Social Media Page</title>
+  <!-- ICONSCOUT CDN -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="./console_profile.css" type="text/css" />
 </head>
 
 <body>
-<div class="dashboard">
-  <aside class="sidebar">
-    <!-- Sidebar content -->
-  </aside>
-  <div class="main-wrapper">
-      <header class="topbar">
-          <!-- Topbar content -->
-      </header>
-      <main class="main-content">
-          <!-- Main section content -->
-      </main>
-      <aside class="right-sidebar">
-          <!-- Right sidebar content -->
-      </aside>
-  </div>
-</div>
-  Console
+  <nav>
+    <div class= "container">
+      <h2 class="logo">
+        Experts
+      </h2>
+      <div class = "search-bar">
+        <i class ="uil uil-search"></i>
+        <input type="search" placeholder="Search for creators, inspirations, and projects">
+      </div> 
+      <div class="create">
+        <label class="btn btn-primary" for="create-post">Create</label>
+        <div class="profile-photo">
+          <img src="./images/profile-1.jpg"
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <!---------------------------MAIN----------------------------->
+  <main>
+    <!---------------------------LEFT----------------------------->
+    <div class="left">
+      <a class="profile">
+        <div class="profile-photo">
+          <img src="./images/profile-1">
+        </div>
+        <div class="handle">
+          <h4>Asokan Pichai</h4>
+          <p class="text-muted">
+            @Shifu
+          </p>
+        </div>
+      </a>
+
+      <!----------SIDE-BAR---------->
+      <div class="sidebar">
+        <a class="menu-item active">
+          <span><i class="uil uil-home"></i></span> <h3>Home</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-compass"></i></span> <h3>Explore</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-bell"></i></span> <h3>Notifications</h3>
+          <!---------------NOTIFICATION POPUP------------------->
+          <div class="notification-popup">
+            <div>
+              <div class="profile-photo">
+                <img src="./images/profile-2.jpg">
+              </div>
+              <div class="notification-body">
+                <b>Sphoorthy</b> accepted your connect request
+                <small class="text-muted">2 DAYS AGO</small>
+            </div>
+          </div>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-envelope-alt"></i></span> <h3>Messages</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-bookmark"></i></span> <h3>Bookmarks</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-chart-line"></i></span> <h3>Analytics</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-palette"></i></span> <h3>Theme</h3>
+        </a>
+        <a class="menu-item active">
+          <span><i class="uil uil-setting"></i></span> <h3>Settings</h3>
+        </a>
+      </div>
+    </div>
+
+    <!---------------------------MIDDLE----------------------------->
+    <div class="middle">
+  
+    </div>
+
+    <!---------------------------RIGHT----------------------------->
+    <div class="right">
+    
+    </div>
+  </main>
+
+  
+  Console
   <footer>
     <div>
         <a class="no-underline" href="">About</a>
@@ -45,12 +120,8 @@
         </select>
     </div>
   </footer>
-  <script src="script.js"></script>
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  <script src="console_profile.js"></script>
+
+  <!--<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>-->
 </body>
 </html>
