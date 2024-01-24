@@ -38,69 +38,79 @@
                     </a>
                     <input id="search-bar" type="text" placeholder="Search..">
                 </section>
-                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-                    <ul class="display-inline">
-                        <li class="header-icon-div">
-                            <a href="">
-                                <div class="header-icon-div">
-                                    <div class="mdc-touch-target-wrapper">
-                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons md-48">
-                                            <div class="mdc-icon-button__ripple">info</div>
-                                        </button>
-                                    </div>
-                                    <p class="header-icon-label"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="header-icon-div">
-                                    <div class="mdc-touch-target-wrapper">
-                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
-                                            <div class="mdc-icon-button__ripple">meeting_room</div>
-                                        </button>
-                                    </div>
-                                    <p class="header-icon-label"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="header-icon-div">
-                                    <div class="mdc-touch-target-wrapper">
-                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
-                                            <div class="mdc-icon-button__ripple">edit_note</div>
-                                        </button>
-                                    </div>
-                                    <p class="header-icon-label"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="header-icon-div">
-                                    <div class="mdc-touch-target-wrapper">
-                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
-                                            <div class="mdc-icon-button__ripple">person</div>
-                                        </button>
-                                    </div>
-                                    <p class="header-icon-label"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="header-icon-div">
-                                    <div class="mdc-touch-target-wrapper">
-                                        <button class="mdc-icon-button mdc-icon-button--touch material-icons">
-                                            <div class="mdc-icon-button__ripple">settings</div>
-                                        </button>
-                                    </div>
-                                    <p class="header-icon-label"></p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                    <nav id="navLinks" class="mdc-top-app-bar__section space-evenly">
+                        <a href="./aboutus.html">
+                            <div class="mdc-touch-target-wrapper">
+                                <button class="mdc-button mdc-button--icon-leading">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                                    aria-hidden="true"
+                                    >info</i
+                                    >
+                                    <span class="mdc-button__label gray font-size-24">
+                                        About
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="./meetings.html">
+                            <div class="mdc-touch-target-wrapper">
+                                <button class="mdc-button mdc-button--icon-leading">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                                    aria-hidden="true"
+                                    >meeting_room</i
+                                    >
+                                    <span class="mdc-button__label gray font-size-24">
+                                        meetings
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="./notes_and_files.html">
+                            <div class="mdc-touch-target-wrapper">
+                                <button class="mdc-button mdc-button--icon-leading">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                                    aria-hidden="true"
+                                    >edit_note</i
+                                    >
+                                    <span class="mdc-button__label gray font-size-24">
+                                        Notes
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="./console_profile.html">
+                            <div class="mdc-touch-target-wrapper">
+                                <button class="mdc-button mdc-button--icon-leading">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                                    aria-hidden="true"
+                                    >person</i
+                                    >
+                                    <span class="mdc-button__label gray font-size-24">
+                                        Profile
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="./aboutus.html">
+                            <div class="mdc-touch-target-wrapper">
+                                <button class="mdc-button mdc-button--icon-leading">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                                    aria-hidden="true"
+                                    >settings</i
+                                    >
+                                    <span class="mdc-button__label gray font-size-24">
+                                        Settings
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                    </nav>
                 </section>
             </div>
         </header>
@@ -122,6 +132,5 @@
                 </select>
             </div>
         </footer>
-        <script src="" async defer></script>
     </body>
 </html>

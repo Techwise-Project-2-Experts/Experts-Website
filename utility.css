@@ -2,7 +2,18 @@
     display: inline-flex;
 }
 
-.icon-size{
-    width: 64px;
-    height: 64px; 
+.space-evenly{
+    justify-content: space-evenly;
+}
+
+.gray{
+    color: #383539;
+}
+
+.dark-gray{
+    color: #626262;
+}
+
+.font-size-24{
+    font-size: 24px !important;
 }

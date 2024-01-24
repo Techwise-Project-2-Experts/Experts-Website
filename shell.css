@@ -36,16 +36,14 @@ header{
     background-color: #F2F7FF;
   }
 
-.header-icon-div{
-    width: 150;
-    height: 125;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  ul{
-    width: 100%;
-  }
+nav span{
+    font-family: 'Inter', sans-serif;
+}
+
+.header-icon{
+    height: 24px !important;
+}
+
 
 
 footer {
@@ -84,6 +82,11 @@ footer div {
 }
 
 #select-language {
+}
+@media (max-width: 1200px) {
+    #navLinks{
+        display: none;
+    }
 }
 
 @media (max-width: 800px) {
