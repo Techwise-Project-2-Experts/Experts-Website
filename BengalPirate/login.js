@@ -1,49 +1,54 @@
-// JavaScript for playing a single video in the background
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("submitButton").addEventListener("click", function(event){
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
 
-// Get the video element from the DOM
-const videoElement = document.getElementById('background-video');
+        // Perform validation checks
+        let emailValid = validateEmail(email);
+        let passwordValid = validatePassword(password);
 
-// Set the source of the video element to 'video1.mp4'
-videoElement.src = './videos/video1.mp4'; // Adjust the path as needed
+        // If both validations pass, redirect to console_profile.html
+        if (emailValid && passwordValid) {
+            window.location.href = '../console_profile.html';
+        }
+    });
 
-// Load and play the video
-videoElement.load();
-videoElement.play().catch(e => {
-    console.error("Error playing video:", e);
+    document.getElementById("togglePassword").addEventListener("click", function(event){
+        let passwordInput = document.getElementById("password");
+        let eyeIcon = this.querySelector('.fa-eye');
+        let eyeSlashIcon = this.querySelector('.fa-eye-slash');
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.style.display = 'none';
+            eyeSlashIcon.style.display = 'block';
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.style.display = 'block';
+            eyeSlashIcon.style.display = 'none';
+        }
+    });
 });
 
-// The following code for cycling through multiple videos is commented out
-/*
-const videoArray = [];
-const numberOfVideos = 13; // Total number of videos you have
 
-for (let i = 1; i <= numberOfVideos; i++) {
-  videoArray.push(`./videos/video${i}.mp4`);
-}
-
-let changingVideo = false;
-
-function changeVideo() {
-  if (changingVideo) {
-    console.log("Already changing video, operation aborted to prevent conflicts.");
-    return;
+function validateEmail(email) {
+  let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (regex.test(email)) {
+    document.getElementById("emailError").innerText = '';
+    return true;
+  } else {
+    document.getElementById("emailError").innerText = 'Invalid email format';
+    return false;
   }
-
-  changingVideo = true;
-  const randomVideo = videoArray[Math.floor(Math.random() * videoArray.length)];
-  console.log("Loading video:", randomVideo); 
-  videoElement.src = randomVideo;
-  videoElement.load(); 
-  videoElement.play().then(() => {
-    changingVideo = false;
-  }).catch(e => {
-    console.error("Error playing video:", e);
-    changingVideo = false;
-  });
 }
 
-videoElement.addEventListener('ended', changeVideo, false);
-*/
-
-// Initial call to set the first video
-// changeVideo(); 
+function validatePassword(password) {
+  let regex = /^(?=.*[A-Z])(?=.*[!@#$&*]).{12,}$/;
+  if (regex.test(password)) {
+    document.getElementById("passwordError").innerText = '';
+    return true;
+  } else {
+    document.getElementById("passwordError").innerText = 'Password must be 12+ characters, include an uppercase character, and a special character';
+    return false;
+  }
+}

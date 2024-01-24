@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // If both validations pass, redirect to console_profile.html
         if (emailValid && passwordValid) {
-            window.location.href = 'console_profile.html';
+            window.location.href = '../console_profile.html';
         }
     });
 
