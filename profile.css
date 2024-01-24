@@ -1,0 +1,42 @@
+header { /* placeholder styling */
+    height: 128px;
+    width: 100vw;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+main {
+    margin-inline: 30px;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    column-gap: 50px;
+}
+
+#user-information {
+    grid-column: 1 / 9;
+    display: grid;
+    row-gap: 15px;
+}
+
+#user-bio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#my-summary {
+    flex-direction: column;
+}
+
+#profile-pic {
+    width: 2.7rem;  
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#user-recommendations {
+    grid-column: 10 / 11;
+    display: grid;
+    row-gap: 25px;
+}
