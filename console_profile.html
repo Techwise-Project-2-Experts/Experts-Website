@@ -27,7 +27,7 @@
       <div class="create">
         <label class="btn btn-primary" for="create-post">Create</label>
         <div class="profile-photo">
-          <img src="./images/profile-1.jpg"
+          <img src="./images/profile-1.jpg">
         </div>
       </div>
     </div>
@@ -35,118 +35,126 @@
 
   <!---------------------------MAIN----------------------------->
   <main>
-    <!---------------------------LEFT----------------------------->
-    <div class="left">
-      <a class="profile">
-        <div class="profile-photo">
-          <img src="./images/profile-1">
-        </div>
-        <div class="handle">
-          <h4>Asokan Pichai</h4>
-          <p class="text-muted">
-            @Shifu
-          </p>
-        </div>
-      </a>
-
-      <!----------SIDE-BAR---------->
-      <div class="sidebar">
-        <a class="menu-item active">
-          <span><i class="uil uil-home"></i></span> <h3>Home</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-compass"></i></span> <h3>Explore</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-bell"></i></span> <h3>Notifications</h3>
-          <!---------------NOTIFICATION POPUP------------------->
-          <div class="notifications-popup">
-            <div>
-              <div class="profile-photo">
-                <img src="./images/profile-2.jpg">
-              </div>
-              <div class="notification-body">
-                <b>Sphoorthy</b> accepted your connect request
-                <small class="text-muted">2 DAYS AGO</small>
-            </div>
-            <div>
-              <div class="profile-photo">
-                <img src="./images/profile-3.jpg">
-              </div>
-              <div class="notification-body">
-                <b>Nick</b> commented on your post
-                <small class="text-muted">1 HOUR AGO</small>
-            </div>
-            <div>
-              <div class="profile-photo">
-                <img src="./images/profile-4.jpg">
-              </div>
-              <div class="notification-body">
-                <b>Felipe</b> and <b>283 others</b> liked your post
-                <small class="text-muted">2 DAYS AGO</small>
-            </div>
-            <div>
-              <div class="profile-photo">
-                <img src="./images/profile-5.jpg">
-              </div>
-              <div class="notification-body">
-                <b>Jason</b> commented on a post you are tagged in
-                <small class="text-muted">2 DAYS AGO</small>
-            </div>
+    <div class="container">
+      <!---------------------------LEFT----------------------------->
+      <div class="left">
+        <a class="profile">
+          <div class="profile-photo">
+            <img src="./images/profile-1.jpg">
           </div>
-          <!----------------------NOTIFICATION POPUP----------------------->
+          <div class="handle">
+            <h4>Asokan Pichai</h4>
+            <p class="text-muted">
+              @Shifu
+            </p>
+          </div>
         </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-envelope-alt"></i></span> <h3>Messages</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-bookmark"></i></span> <h3>Bookmarks</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-chart-line"></i></span> <h3>Analytics</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-palette"></i></span> <h3>Theme</h3>
-        </a>
-        <a class="menu-item active">
-          <span><i class="uil uil-setting"></i></span> <h3>Settings</h3>
-        </a>
+
+        <!-------------------------SIDE-BAR--------------------------->
+        <div class="sidebar">
+          <a class="menu-item active">
+            <span><i class="uil uil-home"></i></span> <h3>Home</h3>
+          </a>
+          <a class="menu-item">
+            <span><i class="uil uil-compass"></i></span> <h3>Explore</h3>
+          </a>
+          <a class="menu-item" id="notifications">
+            <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span> <h3>Notifications</h3>
+            <!---------------NOTIFICATION POPUP------------------->
+            <div class="notifications-popup">
+              <div>
+                <div class="profile-photo">
+                  <img src="./images/profile-2.jpg">
+                </div>
+                <div class="notification-body">
+                  <b>Sphoorthy</b> accepted your connect request
+                  <small class="text-muted">2 DAYS AGO</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img src="./images/profile-3.jpg">
+                </div>
+                <div class="notification-body">
+                  <b>Nick</b> commented on your post
+                  <small class="text-muted">1 HOUR AGO</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img src="./images/profile-4.jpg">
+                </div>
+                <div class="notification-body">
+                  <b>Felipe</b> and <b>283 others</b> liked your post
+                  <small class="text-muted">2 DAYS AGO</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img src="./images/profile-5.jpg">
+                </div>
+                <div class="notification-body">
+                  <b>Jason</b> commented on a post you are tagged in
+                  <small class="text-muted">2 DAYS AGO</small>
+                </div>
+              </div>
+            </div>
+            <!----------------------END NOTIFICATION POPUP----------------------->
+          </a>
+          <a class="menu-item" id="messages-notifications">
+            <span><i class="uil uil-envelope-alt" ><small class="notification-count">6</small></i></span> <h3>Messages</h3>
+          </a>
+          <a class="menu-item">
+            <span><i class="uil uil-bookmark"></i></span> <h3>Bookmarks</h3>
+          </a>
+          <a class="menu-item">
+            <span><i class="uil uil-chart-line"></i></span> <h3>Analytics</h3>
+          </a>
+          <a class="menu-item">
+            <span><i class="uil uil-palette"></i></span> <h3>Theme</h3>
+          </a>
+          <a class="menu-item">
+            <span><i class="uil uil-setting"></i></span> <h3>Settings</h3>
+          </a>
+        </div>
+        <!-----------------END OF SIDEBAR----------------------------->
+        <label for="create-post" class="btn btn-primary">Create Post</label>
+      </div>
+
+      <!---------------------------MIDDLE----------------------------->
+      <div class="middle">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt 
+          itaque impedit deleniti minus, sit obcaecati ad officia! Facilis 
+          dolorem expedita id sit quisquam sed incidunt! Eum quae tempora ab vitae?
+      </div>
+
+      <!---------------------------RIGHT----------------------------->
+      <div class="right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam illo 
+        facere consequatur provident deleniti voluptate pariatur cum similique 
+        sequi sed, asperiores libero esse! Eaque autem illum dicta magni quia.
       </div>
     </div>
-
-    <!---------------------------MIDDLE----------------------------->
-    <div class="middle">
-  
-    </div>
-
-    <!---------------------------RIGHT----------------------------->
-    <div class="right">
-    
-    </div>
   </main>
-
-  
-  Console
-  <footer>
-    <div>
-        <a class="no-underline" href="">About</a>
-        <a class="no-underline" href="">Community Guidelines</a>
-        <a class="no-underline" href="">Privacy & Terms</a>
-        <a class="no-underline" href="">Accessibility</a>
-        <a class="no-underline" href="">Mobile</a>
-        <a class="no-underline" href="">FAQ</a>
-    </div>
-    
-    <div id="select-language">
-        <label id="language-label" for="language">Select Language:</label>
-            <select name="language" id="language">
-            <option value="English">English</option>
-            <option value="Spanish">Espanol</option>
-        </select>
-    </div>
-  </footer>
-  <script src="console_profile.js"></script>
-
-  <!--<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>-->
 </body>
+
+<footer>
+  <div>
+      <a class="no-underline" href="">About</a>
+      <a class="no-underline" href="">Community Guidelines</a>
+      <a class="no-underline" href="">Privacy & Terms</a>
+      <a class="no-underline" href="">Accessibility</a>
+      <a class="no-underline" href="">Mobile</a>
+      <a class="no-underline" href="">FAQ</a>
+  </div>
+    
+  <div id="select-language">
+      <label id="language-label" for="language">Select Language:</label>
+          <select name="language" id="language">
+          <option value="English">English</option>
+          <option value="Spanish">Espanol</option>
+      </select>
+  </div>
+</footer>
+<script src="console_profile.js"></script>
 </html>
