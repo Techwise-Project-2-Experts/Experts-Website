@@ -291,4 +291,53 @@ main .container .left .profile{
   width: 100%;
   background: red;
   position: relative;
+  overflow: hidden;
+}
+
+.middle .stories .story:nth-child(1){
+  background: url("./images/story-1.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(2){
+  background: url("./images/story-2.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(3){
+  background: url("./images/story-3.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(4){
+  background: url("./images/story-4.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(5){
+  background: url("./images/story-5.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(6){
+  background: url("./images/story-6.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(7){
+  background: url("./images/story-7.jpg")
+  no-repeat center center/cover;
+
+}
+
+.middle .stories .story:nth-child(8){
+  background: url("./images/story-8.jpg")
+  no-repeat center center/cover;
+
 }
