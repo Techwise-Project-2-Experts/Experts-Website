@@ -242,4 +242,53 @@ main .container .left .profile{
   width: 30rem;
   background: var(--color-white);
   border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: 0 0 2rem hsl(var
+  (--color-primary), 75%, 60% 25%);
+  z-index: 8;
+  display: none;
+}
+
+.left .notifications-popup::before{
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  background: var(--color-white);
+  position: absolute;
+  left: -0.6rem;
+  transform: rotate(45deg);
+}
+
+.left .notifications-popup > div {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left .notifications-popup small{
+  display: block;
+}
+
+/* ================= MIDDLE ========================*/
+.middle .stories{
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  gap: 0.5rem;
+}
+
+.middle .stories .story{
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
+  width: 100%;
+  background: red;
+  position: relative;
 }
