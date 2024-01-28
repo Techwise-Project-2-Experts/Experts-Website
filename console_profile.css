@@ -315,7 +315,7 @@ main .container .left .profile{
 }
 
 .middle .stories .story:nth-child(2){
-  background: url("./images/story-2.jpg")
+  background: url("./images/story-4.jpg")
   no-repeat center center/cover;
 
 }
@@ -327,7 +327,7 @@ main .container .left .profile{
 }
 
 .middle .stories .story:nth-child(4){
-  background: url("./images/story-4.jpg")
+  background: url("./images/story-2.jpg")
   no-repeat center center/cover;
 
 }
