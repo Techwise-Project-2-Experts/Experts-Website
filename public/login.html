@@ -14,7 +14,7 @@
   
   <div class="form-container">
     <h1>Log In</h1>
-    <form class="login-form" id="loginForm">
+    <form class="login-form" action="/login" method="post" id="loginForm">
       <input type="email" id="email" name="email" placeholder="Email">
       <span id="emailError" class="error-message"></span> <!-- Error message for email -->
 
@@ -27,7 +27,7 @@
         <span id="passwordError" class="error-message"></span> <!-- Error message for password -->
       </div>
       
-      <button type="button" id="submitButton">Sign in</button>
+      <button type="submit" id="submitButton">Sign in</button>
       <a href="#" class="forgot-password">Forgot Password?</a>
     </form>
     <p class="signup-prompt">New to Experts? <a href="./signup.html" class="signup-link">Join now!</a></p>
