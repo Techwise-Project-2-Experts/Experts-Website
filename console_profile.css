@@ -101,13 +101,13 @@ nav .container{
   justify-content: space-between;
 }
 
-nav .search-bar{
+.search-bar{
   background: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
 }
 
-nav .search-bar input[type="search"]{
+.search-bar input[type="search"]{
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
@@ -438,4 +438,91 @@ main .container .left .profile{
 
 .middle .liked-by p {
   margin-left: 0.5rem;
+}
+
+/* ------------------------- RIGHT -----------------------------*/
+main .container .right{
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages{
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages i {
+  font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right ..messages .category h6{
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right .messages .category .active{
+  border-color: var(--color-dark);
+}
+
+.right .messages .message-requests{
+  color: var(--color-primary);
+}
+
+.right .messages .message{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.right .message .profile-photo{
+  position: relative;
+  overflow: visible;
+}
+
+.right .profile-photo img{
+  border-radius: 50%;
+}
+
+.right .messages .message:last-child{
+  margin: 0;
+}
+
+.right .messages .message p{
+  font-size: 0.8rem;
+}
+
+.right .messages .message .profile-photo .active{
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  background: var(--color-success);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
