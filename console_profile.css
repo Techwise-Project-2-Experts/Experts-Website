@@ -294,6 +294,20 @@ main .container .left .profile{
   overflow: hidden;
 }
 
+.middle .stories .story::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  position: absolute;
+  bottom: 0;
+}
+
+.middle .stories .story .name {
+  z-index: 2;
+}
+
 .middle .stories .story:nth-child(1){
   background: url("./images/story-1.jpg")
   no-repeat center center/cover;
@@ -340,4 +354,32 @@ main .container .left .profile{
   background: url("./images/story-8.jpg")
   no-repeat center center/cover;
 
+}
+
+.middle .story .profile-photo{
+  width: 2rem;
+  height: 2rem;
+  align-self: start;
+  border: 2px solid var(--color-primary);
+}
+
+/* -------------------------CREATE POST----------------------------------*/
+.middle .create-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type='text']{
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
 }
