@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
-  --color-white: hsl(252, 30%, 100%);
-  --color-light: hsl(252, 30%, 95%);
-  --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(252, 75%, 60%);
+  --primary-color-hue: 252;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 95%;
+  --white-color-lightness: 100%;
+
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
+  --color-light: hsl(252, 30%, var(--light-color-lightness));
+  --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+  --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
   --color-danger: hsl(0, 95%, 65%);
-  --color-dark: hsl(252, 30%, 17%);
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
   --color-black: hsl(252, 30%, 10%);
 
   --border-radius: 2rem;
@@ -568,6 +573,7 @@ main .container .right{
   display:grid;
   place-items: center;
   font-size: 0.9rem;
+  display: none;
 }
 
 .customize-theme .card{
@@ -575,6 +581,7 @@ main .container .right{
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* ------------------------- FONT SIZE -----------------------------*/
@@ -731,6 +738,10 @@ MEDIA QUERIES FOR SMALL LAPTOPS AND BIG TABLETS
   .left .btn {
     display: none;
   }
+
+  .customized-theme .card{
+    width: 80vw;
+  }
 }
 
 /*
@@ -773,5 +784,9 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
 
   main .container .right {
     display: none;
+  }
+
+  .customized-theme .card{
+    width: 92vw;
   }
 }
