@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experts - Log In</title>
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="shell.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +15,7 @@
   
   <div class="form-container">
     <h1>Log In</h1>
-    <form class="login-form" id="loginForm">
+    <form class="login-form" action="/login" method="post" id="loginForm">
       <input type="email" id="email" name="email" placeholder="Email">
       <span id="emailError" class="error-message"></span> <!-- Error message for email -->
 
@@ -27,7 +28,7 @@
         <span id="passwordError" class="error-message"></span> <!-- Error message for password -->
       </div>
       
-      <button type="button" id="submitButton">Sign in</button>
+      <button type="submit" id="submitButton">Sign in</button>
       <a href="#" class="forgot-password">Forgot Password?</a>
     </form>
     <p class="signup-prompt">New to Experts? <a href="./signup.html" class="signup-link">Join now!</a></p>
@@ -35,4 +36,22 @@
 
   <script src="login.js"></script>
 </body>
+<footer>
+  <div>
+      <a class="no-underline" href="">About</a>
+      <a class="no-underline" href="">Community Guidelines</a>
+      <a class="no-underline" href="">Privacy & Terms</a>
+      <a class="no-underline" href="">Accessibility</a>
+      <a class="no-underline" href="">Mobile</a>
+      <a class="no-underline" href="">FAQ</a>
+  </div>
+    
+  <div id="select-language">
+      <label id="language-label" for="language">Select Language:</label>
+          <select name="language" id="language">
+          <option value="English">English</option>
+          <option value="Spanish">Espanol</option>
+      </select>
+  </div>
+</footer>
 </html>
