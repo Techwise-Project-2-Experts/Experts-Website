@@ -1,42 +1,161 @@
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+  
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+  
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
 header { /* placeholder styling */
-    height: 128px;
+    height: 50px;
     width: 100vw;
     background-color: gray;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
+body {
+    height: 100vw;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
 main {
     margin-inline: 30px;
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    column-gap: 50px;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    gap: 50px;
+}
+  
+.left {
+    width: 70%;
+}
+
+.left section {
+    background: white;
+    border-radius: var(--card-border-radius);
+    margin-bottom: 20px;
+}
+
+
+.left section i{
+    font-size: 2.4rem;
+    color: var(--color-gray);
+    /* margin-left: 2rem; */
+    position: relative;
+  
+}
+.left section h1{
+    font-size: 2rem;
+}
+
 
 #user-information {
-    grid-column: 1 / 9;
-    display: grid;
-    row-gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-#user-bio {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-#my-summary {
-    flex-direction: column;
-}
-
-#profile-pic {
-    width: 2.7rem;  
+.profile-photo{
+    width: 6.7rem;  
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
 }
 
-#user-recommendations {
-    grid-column: 10 / 11;
+img{
+    display: block;
+    width: 100%;
+}
+
+.about {
+    padding-block: 5px;
+}
+
+.left section h2,
+.left section p {
+    margin-inline: 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 10px;
+}
+
+.section-header .icons i{
+    margin-inline: 5px;
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    margin-inline: 15px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px rgb(222, 222, 222);
+}
+
+.logo {
+    margin: 10px;
+    background: gray;
+    height: 50px;
+    aspect-ratio: 1/1;
+}
+
+.entry-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.entry-information h3, 
+.entry-information span {
+    margin: 0;
+    margin-left: 15px;
+    width: fit-content;
+}
+
+
+
+
+
+
+
+.right {
+    width: 30%;
+}
+
+.right section {
+    background: white;
+    border-radius: var(--card-border-radius);
+}
+
+.ampler-padding--bottom {
+    margin-bottom: 20px
+}
+
+
+#user-bio {
     display: grid;
-    row-gap: 25px;
+    grid-template-columns: 2fr 1fr;
 }
