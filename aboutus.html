@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link 
+  href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" 
+  rel="stylesheet"
+  />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link 
+  rel="stylesheet" 
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="shell.css">
+  <link rel="stylesheet" href="./utility.css">
+</head>
+
+<body>
+  <header class="mdc-top-app-bar mdc-top-app-bar--prominent">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="./index.html">
+                <div id="experts-logo-div"></div>
+            </a>
+            <input id="search-bar" type="text" placeholder="Search..">
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <nav id="navLinks" class="mdc-top-app-bar__section space-evenly">
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >info</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                About
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./meetings.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >meeting_room</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                meetings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./notes_and_files.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >edit_note</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Notes
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./console_profile.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >person</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Profile
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >settings</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Settings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+            </nav>
+        </section>
+    </div>
+</header>
+
+  <footer>
+    <div>
+        <a class="no-underline" href="">About</a>
+        <a class="no-underline" href="">Community Guidelines</a>
+        <a class="no-underline" href="">Privacy & Terms</a>
+        <a class="no-underline" href="">Accessibility</a>
+        <a class="no-underline" href="">Mobile</a>
+        <a class="no-underline" href="">FAQ</a>
+    </div>
+    
+    <div id="select-language">
+        <label id="language-label" for="language">Select Language:</label>
+            <select name="language" id="language">
+            <option value="English">English</option>
+            <option value="Spanish">Espanol</option>
+        </select>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

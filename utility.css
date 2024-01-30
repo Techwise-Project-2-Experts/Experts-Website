@@ -1,0 +1,19 @@
+.display-inline{
+    display: inline-flex;
+}
+
+.space-evenly{
+    justify-content: space-evenly;
+}
+
+.gray{
+    color: #383539;
+}
+
+.dark-gray{
+    color: #626262;
+}
+
+.font-size-24{
+    font-size: 24px !important;
+}
