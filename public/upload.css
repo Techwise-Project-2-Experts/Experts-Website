@@ -1,27 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    flex-direction: column;
-    background: #e0eafc;
-    background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
-    background: linear-gradient(to right, #cfdef3, #e0eafc);
-}
-
 .container {
     max-width: 650px;
+    margin: 5px auto;
     width: 100%;
     padding: 30px;
     background: #fff;
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    justify-content: center;
+    align-self: center;
 }
 
 .drag-area {
