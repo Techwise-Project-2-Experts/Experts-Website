@@ -1,0 +1,27 @@
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box i {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#create-note {
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: hsl(252, 75%, 60%)
+}
