@@ -5,10 +5,16 @@ const collection = require("./mongodb")
 
 const PORT = 4000;
 
+app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
 const loggerMiddleware = (req, res, next) =>{
     console.log(req.method, req.url);
     next();
 }
+
+app.use(loggerMiddleware);
 
 app.get("/", (req, res)=>{
     const indexPath = path.join(__dirname, "../public/index.html");
@@ -20,12 +26,16 @@ app.get("/console", (req, res)=>{
     res.sendFile(consolePath);
 })
 
+app.get("/profile", (req, res)=>{
+    const consolePath = path.join(__dirname, "../public/profile.html");
+    res.sendFile(consolePath);
+})
+
 app.get("/login", (req, res)=>{
     res.sendFile("login.html");
 })
 
-app.use(express.urlencoded({ extended: true}));
-app.use(express.json());
+
 
 app.post("/signup", async (req, res)=>{
     const data={
@@ -63,9 +73,6 @@ app.post("/login", async (req, res)=>{
         res.json({ status: 'error', message: 'Email or Password not correct. Please try again.' });
     }
 })
-
-app.use(loggerMiddleware);
-app.use(express.static("public"));
 
 app.listen(PORT, () =>{
     console.log("server running on port " + PORT);
