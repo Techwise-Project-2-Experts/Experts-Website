@@ -19,24 +19,18 @@
     --sticky-top-right: -18rem;
 }
 
-header { /* placeholder styling */
-    height: 50px;
-    width: 100vw;
-    background-color: gray;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
 body {
-    height: 100vw;
+    height: auto;
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark);
     background: var(--color-light);
     overflow-x: hidden;
+    margin-top: 128px;
 }
 
 main {
     margin-inline: 30px;
+    padding-top: 30px;
 }
 
 .container {
@@ -48,7 +42,7 @@ main {
 }
   
 .left {
-    width: 70%;
+    width: 60%;
 }
 
 .left section {
@@ -69,15 +63,29 @@ main {
     font-size: 2rem;
 }
 
-
 #user-information {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-inline: 30px;
+}
+
+#username {
+    margin-block: 15px;
+}
+
+#user-headline {
+    font-size: 20px;
+}
+
+#user-location {
+    font-size: 17px;
+    color: var(--color-gray);
 }
 
 .profile-photo{
-    width: 6.7rem;  
+    width: 8.7rem;  
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
@@ -135,9 +143,12 @@ img{
     width: fit-content;
 }
 
+.skill-name {
+    font-size: 1.2rem;
+}
 
 
-
+/****************RIGHT sIDE******************/
 
 
 
@@ -150,8 +161,41 @@ img{
     border-radius: var(--card-border-radius);
 }
 
+.section-header--right {
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+.recommendation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-inline: 15px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px rgb(222, 222, 222);
+    gap: 30px;
+}
+
+.recommended-photo {
+    width: 4.5rem;  
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recommendation-name {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.recommendation-description {
+    font-size: 15px;
+    color: var(--color-gray);
+}
+
 .ampler-padding--bottom {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 

@@ -13,11 +13,91 @@
     
 </head>
 <body>
-  <!-- <header>
-    <div>logo</div>
-    <div>search bar</div>
-    <div>navbar</div>
-  </header> -->
+
+  <header class="mdc-top-app-bar mdc-top-app-bar--prominent">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="./index.html">
+                <div id="experts-logo-div"></div>
+            </a>
+            <input id="search-bar" type="text" placeholder="Search..">
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <nav id="navLinks" class="mdc-top-app-bar__section space-evenly">
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >info</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                About
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./meetings.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >meeting_room</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                meetings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./notes_and_files.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >edit_note</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Notes
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./console_profile.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >person</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Profile
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >settings</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Settings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+            </nav>
+        </section>
+    </div>
+</header>
 
     <main>
       <div class="container">
@@ -25,9 +105,9 @@
           <section id="user-information">
             <div class="my-summary">
               <i class="uil uil-edit"></i>
-              <h1>User's Full name</h1>
-              <p>Headline</p>
-              <p>Location</p>
+              <h1 id="username">User's Full name</h1>
+              <p id="user-headline">Headline</p>
+              <p id="user-location">Location</p>
             </div>
 
             <div class="profile-photo">
@@ -111,19 +191,71 @@
               
             </div>
           </section>
+
+          <section id="skills">
+            <h2>Skills</h2>
+            <div class="entry">
+              <div class="logo"></div>
+              <div class="entry-information">
+                <p class="skill-name">Skill Name</p>
+              </div>
+            </div>
+          </section>
         </div>
 
 
         <div class="right">
           <section>
-            <p>Recommendations</p>
+            <h3 class="section-header--right">People who visited your profile</h3>
+            
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-6.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Person Name</p>
+                <p class="recommendation-description">Person description</p>
+              </div>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-4.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Person Name</p>
+                <p class="recommendation-description">Person description</p>
+              </div>
+            </div>
           </section>
+
+
+
+
           <section>
-            <p>Recommendations</p>
+            <h3 class="section-header--right">You should connect with...</h3>
+            
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-2.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Person Name</p>
+                <p class="recommendation-description">Person description</p>
+              </div>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-15.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Person Name</p>
+                <p class="recommendation-description">Chairman of Amazon</p>
+              </div>
+            </div>
           </section>
-          <section>
-            <p>Recommendations</p>
-          </section>
+
         </div>
 
       </div>
