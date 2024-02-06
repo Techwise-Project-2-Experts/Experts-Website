@@ -62,17 +62,17 @@ function displayFile() {
 function moveFileToContainer() {
     let fileContainer = document.getElementById('file-container');
 
-    // Remove inital text from file-container
+    // Remove existing content from the file-container
     fileContainer.innerHTML = '';
 
     // Check for image
     let imageInDragArea = dragArea.querySelector('img');
 
     if (imageInDragArea) {
-        // Create new image element
+        // Create a new image element
         let newImage = document.createElement('img');
         
-        // Set the source and alt attributes based on the image
+        // Set the source and alt attributes based on the existing image
         newImage.src = imageInDragArea.src;
         newImage.alt = imageInDragArea.alt;
 

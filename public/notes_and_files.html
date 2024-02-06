@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Landing Page</title>
+    <title>Notes and Files</title>
     <link href="upload.css" rel="stylesheet" type="text/css">
     <link href="notes_and_files.css" rel="stylesheet" type="text/css" />
     <link href="shell.css" rel="stylesheet" type="text/css">
@@ -32,6 +32,11 @@
   </head>
 
   <body>
+    <!--Needs:
+      -- Updated to look more like the other pages
+      -- Non-image files to display name when uploaded and a file icon (?) or something along those lines
+      -- Connect to database to store files
+    -->
     <header class="mdc-top-app-bar mdc-top-app-bar--prominent" style="background-color: white;">
       <div class="mdc-top-app-bar__row">
           <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -117,8 +122,6 @@
       </div>
   </header>
 
-
-  <!--<br><br><br><br><br><br><br><br>-->
     <div class="main-container">
       <div id="search-files">
 
@@ -130,10 +133,12 @@
       </div>
 
       <div id="create-area">
-        <button id="create-button">
+        <a href="notes.html">
+        <button id="create-button" >
           <i class="uil uil-plus-square"></i>
           Create
         </button>
+        </a>
         <button id="upload-button">
           <i class="uil uil-file-plus"></i>
           Upload
@@ -150,7 +155,7 @@
                 <span class="header">Drag & Drop</span>
                 <span class="header"> or <span class="button">browse</span> </span>
                 <input type="file" hidden />
-                <span class="support">Supports: JPEG, JPG, PNG</span>
+                <!--<span class="support">Supports: JPEG, JPG, PNG</span>-->
             </div>
           </div>
             <button id="cancel-drop">Cancel</button>
