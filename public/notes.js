@@ -27,15 +27,15 @@ button.addEventListener("click", () => {
       trashIcon.remove();
       confirmIcon.remove();
       editIcon.remove();
-    })
+    });
 
     confirmIcon.addEventListener("click", () => {
       // Make content not editable when confirmed
       inputBox.setAttribute("contenteditable", "false");
-    })
+    });
 
     editIcon.addEventListener("click", () => {
       // Make content editable when edit is clicked
       inputBox.setAttribute("contenteditable", "true");
-    })
+    });
   });
