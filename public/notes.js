@@ -32,6 +32,47 @@ button.addEventListener("click", () => {
     confirmIcon.addEventListener("click", () => {
       // Make content not editable when confirmed
       inputBox.setAttribute("contenteditable", "false");
+      confirmation();
+
+      function confirmation() {
+        let confirmationBox = document.createElement("div");
+        let yesButton = document.createElement("button");
+        let noButton = document.createElement("button");
+        let titleInput = document.createElement("input");
+        let confirmIcon = document.createElement("i");
+        let titleText = document.createElement("h3");
+    
+        confirmIcon.className = "uil-check-square";
+        confirmationBox.className = "confirmation-box";
+        confirmationBox.textContent = "Do you want to save this note?";
+        yesButton.textContent = "Yes";
+        noButton.textContent = "No";
+        
+        notesContainer.appendChild(confirmationBox);
+        confirmationBox.append(yesButton);
+        confirmationBox.append(noButton);
+    
+        yesButton.addEventListener("click", () => {
+          confirmationBox.textContent = "What would you like to name your note?";
+          yesButton.remove();
+          noButton.remove();
+          
+          confirmationBox.appendChild(titleInput);
+          confirmationBox.appendChild(confirmIcon);
+    
+          confirmIcon.addEventListener("click", () => {
+            titleText.textContent = titleInput.value;
+            notesContainer.insertBefore(titleText, trashIcon);
+          
+            // Save to database ?
+          
+            confirmIcon.remove();
+            titleInput.remove();
+            confirmationBox.remove();
+          });
+          
+        });
+      };
     });
 
     editIcon.addEventListener("click", () => {
