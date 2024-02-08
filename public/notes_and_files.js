@@ -11,3 +11,8 @@ window.addEventListener("click", function (event) {
     uploadPopup.classList.remove("show");
   }
 });
+
+document.getElementById("confirm-drop").addEventListener("click", function () {
+  // upon confirm -> file should appear in file storage area, added to server, + upload popup should hide
+  document.getElementById("upload-popup").classList.remove("show");
+});
