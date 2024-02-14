@@ -23,13 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const contentType = response.headers.get('Content-Type');
         if (contentType && contentType.includes('application/json')){
           const responseData = await response.json();
+          sessionStorage.setItem('user', JSON.stringify(responseData))
+          console.log("login.js - You're response is:")
           console.log(responseData);
-          displayMessage(responseData.message)
-        } else{
-            if (response.redirected){
+          if (responseData.message != undefined){ 
+            displayMessage(responseData.message)
+          } else {
               console.log("Redirecting...")
-              window.location.href = response.url;
-            }
+              window.location.href = "./console_profile.html";
+          }
+        } else{
             console.log("I don't know what else to do.")
           }
       } else{

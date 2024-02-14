@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path=require("path");
-const collection = require("./mongodb")
+const { collection, userCollection } = require("./mongodb")
 
 const PORT = 4000;
 
@@ -23,6 +23,16 @@ app.get("/", (req, res)=>{
 
 app.get("/console", (req, res)=>{
     const consolePath = path.join(__dirname, "../public/console_profile.html");
+    res.sendFile(consolePath);
+})
+
+app.get("/files", (req, res)=>{
+    const consolePath = path.join(__dirname, "../public/files.html");
+    res.sendFile(consolePath);
+})
+
+app.get("/notes", (req, res)=>{
+    const consolePath = path.join(__dirname, "../public/notes.html");
     res.sendFile(consolePath);
 })
 
@@ -67,8 +77,14 @@ app.post("/login", async (req, res)=>{
     const user = await collection.findOne(data);
 
     if (user){
-        console.log("Redirecting...");
-        res.redirect("/console");
+        const userData = await userCollection.findOne({email: data.email})
+        if(userData){
+            console.log("server.js - Your response is:")
+            console.log(userData);
+            res.json(userData)
+        } else {
+            console.log("This user has no data.")
+        }
     }else{
         res.json({ status: 'error', message: 'Email or Password not correct. Please try again.' });
     }
