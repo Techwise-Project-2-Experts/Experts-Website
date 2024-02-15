@@ -71,16 +71,21 @@ function moveFileToContainer() {
     if (imageInDragArea) {
         // Create a new image element
         let newImage = document.createElement('img');
+        let imgCaption = document.createElement('figcaption'); 
         
         // Set the source and alt attributes based on the existing image
         newImage.src = imageInDragArea.src;
         newImage.alt = imageInDragArea.alt;
+        imgCaption.textContent = file.name;
 
         // Add class for styling in the grid
         newImage.classList.add('grid-icon');
+        imgCaption.style.marginLeft = "10%";
+        imgCaption.style.fontSize = "100%";
 
         // Append the new image to the file-container
         fileContainer.appendChild(newImage);
+        fileContainer.appendChild(imgCaption);
     }
 
     // Return drag area to initial state
@@ -100,6 +105,9 @@ document.getElementById("cancel-drop").addEventListener("click", function () {
 
 // When the user confirms the upload -> move the file from drag area to file container
 document.getElementById("confirm-drop").addEventListener("click", function () {
+    // Temporarily -> store as json file in local
+    console.log(file.name, file);
+    localStorage.setItem(file.name, JSON.stringify(file));
     moveFileToContainer();
 
     // Hide the upload popup

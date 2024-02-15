@@ -10,9 +10,7 @@ body, html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  background: #e0eafc;
-  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
-  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  background-color: hsl(252, 30%, 95%);
 }
 
 .main-container {
@@ -33,6 +31,7 @@ body, html {
   padding: 5px;
   border: none;
   font-family: 'Poppins', sans-serif;
+  background-color: white;
 }
 
 #create-area {
@@ -49,6 +48,7 @@ body, html {
   width: 20%;
   border: none;
   font-family: 'Poppins', sans-serif;
+  background-color: white;
 }
 
 #create-button {
@@ -57,11 +57,12 @@ body, html {
 
 #file-container {
   width: 80%;
-  min-height: 500px;
+  min-height: 1000px;
   background-color: white;
   align-self: center;
   position: relative;
   border-radius: 10px;
+  border: none;
 }
 
 #file-container p {

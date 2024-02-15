@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Notes and Files</title>
+    <title>Files</title>
     <link href="upload.css" rel="stylesheet" type="text/css">
     <link href="files.css" rel="stylesheet" type="text/css" />
     <link href="shell.css" rel="stylesheet" type="text/css">
@@ -33,8 +33,7 @@
 
   <body>
     <!--Needs:
-      -- Updated to look more like the other pages
-      -- Non-image files to display name when uploaded and a file icon (?) or something along those lines
+      -- Non-image files to display file icon (?) or something along those lines
       -- Connect to database to store files
     -->
     <header class="mdc-top-app-bar mdc-top-app-bar--prominent" style="background-color: white;">
@@ -122,82 +121,82 @@
       </div>
   </header>
 
-    <div class="main-container">
-      <div id="search-files">
+  <div class="main-container">
+    <div id="search-files">
 
-        <input
-          type="text"
-          id="search-files-bar"
-          placeholder="Search Files..."
-        />
-      </div>
-
-      <div id="create-area">
-        <a href="notes.html">
-        <button id="create-button" >
-          <i class="uil uil-plus-square"></i>
-          Create
-        </button>
-        </a>
-        <button id="upload-button">
-          <i class="uil uil-file-plus"></i>
-          Upload
-        </button>
-
-        <div id="upload-popup" class="popup">
-          <div class="popup-content">
-          <div class="container">
-            <h3>Upload your File</h3>
-            <div class="drag-area">
-                <div class="icon">
-                    <i class="fas fa-images"></i>
-                </div>
-                <span class="header">Drag & Drop</span>
-                <span class="header"> or <span class="button">browse</span> </span>
-                <input type="file" hidden />
-                <!--<span class="support">Supports: JPEG, JPG, PNG</span>-->
-            </div>
-          </div>
-            <button id="cancel-drop">Cancel</button>
-            <button id="confirm-drop">Confirm</button>
-          </div>
-        </div>
-      </div>
-      
-
-      <!--Want to have file container have drag and drop -->
-      <div id="file-container">
-        <p>No files in storage. Create or upload a file now!</p>
-      </div>
+      <input
+        type="text"
+        id="search-files-bar"
+        placeholder="Search Files..."
+      />
     </div>
 
-    <footer>
-      <div>
-          <a class="no-underline" href="">About</a>
-          <a class="no-underline" href="">Community Guidelines</a>
-          <a class="no-underline" href="">Privacy & Terms</a>
-          <a class="no-underline" href="">Accessibility</a>
-          <a class="no-underline" href="">Mobile</a>
-          <a class="no-underline" href="">FAQ</a>
+    <div id="create-area">
+      <a href="notes.html">
+      <button id="create-button" >
+        <i class="uil uil-plus-square"></i>
+        New Note
+      </button>
+      </a>
+      <button id="upload-button">
+        <i class="uil uil-file-plus"></i>
+        Upload
+      </button>
+
+      <div id="upload-popup" class="popup">
+        <div class="popup-content">
+        <div class="container">
+          <h3>Upload your File</h3>
+          <div class="drag-area">
+              <div class="icon">
+                  <i class="fas fa-images"></i>
+              </div>
+              <span class="header">Drag & Drop</span>
+              <span class="header"> or <span class="button">browse</span> </span>
+              <input type="file" hidden />
+              <!--<span class="support">Supports: JPEG, JPG, PNG</span>-->
+          </div>
+        </div>
+          <button id="cancel-drop">Cancel</button>
+          <button id="confirm-drop">Confirm</button>
+        </div>
       </div>
-      
-      <div id="select-language">
-          <label id="language-label" for="language">Select Language:</label>
-              <select name="language" id="language">
-              <option value="English">English</option>
-              <option value="Spanish">Espanol</option>
-          </select>
-      </div>
-  </footer>
+    </div>
+    
 
-    <script src="notes_and_files.js"></script>
-    <script src="upload.js"></script>
+    <!--Want to have file container have drag and drop -->
+    <div id="file-container">
+      <p>No files in storage. Create a note or upload a file now!</p>
+    </div>
+  </div>
 
-    <!--<script
-      src="https://replit.com/public/js/replit-badge-v2.js"
-      theme="dark"
-      position="bottom-right"
-    ></script>-->
+  <footer>
+    <div>
+        <a class="no-underline" href="">About</a>
+        <a class="no-underline" href="">Community Guidelines</a>
+        <a class="no-underline" href="">Privacy & Terms</a>
+        <a class="no-underline" href="">Accessibility</a>
+        <a class="no-underline" href="">Mobile</a>
+        <a class="no-underline" href="">FAQ</a>
+    </div>
+    
+    <div id="select-language">
+        <label id="language-label" for="language">Select Language:</label>
+            <select name="language" id="language">
+            <option value="English">English</option>
+            <option value="Spanish">Espanol</option>
+        </select>
+    </div>
+</footer>
 
-  </body>
+  <script src="files.js"></script>
+  <script src="upload.js"></script>
+
+  <!--<script
+    src="https://replit.com/public/js/replit-badge-v2.js"
+    theme="dark"
+    position="bottom-right"
+  ></script>-->
+
+</body>
 </html>
