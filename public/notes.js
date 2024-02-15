@@ -64,10 +64,18 @@ button.addEventListener("click", () => {
             let confirmIcon = document.createElement("i");
             confirmIcon.className = "uil-check-square";
             confirmIcon.addEventListener("click", () => {
-                titleText.textContent = titleInput.value;
-                notesContainer.insertBefore(titleText, iconsContainer);
-                confirmationBox.remove();
-            });
+              titleText.textContent = titleInput.value;
+              notesContainer.insertBefore(titleText, iconsContainer);
+              localStorage.setItem(titleInput.value, inputBox.value); // Storing note content in localStorage
+              confirmationBox.remove();
+          
+              let noteContent = localStorage.getItem(titleText.value);
+              console.log(noteContent); // Log the note content to the console
+          
+              // Display the note content in the inputBox
+              //inputBox.textContent = noteContent;
+          });
+          
             confirmationBox.appendChild(confirmIcon);
         });
 
