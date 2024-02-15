@@ -32,6 +32,15 @@
     background-color: hsl(252, 75%, 60%)
 }
 
-.confirmation-box button {
+.note-choices {
     margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.title-input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
 }

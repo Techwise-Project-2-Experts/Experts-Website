@@ -10,9 +10,7 @@ body, html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  background: #e0eafc;
-  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
-  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  background: white;
 }
 
 .main-container {
@@ -31,8 +29,9 @@ body, html {
   border-radius: 8px;
   margin: 10px;
   padding: 5px;
-  border: none;
+  border: 1px solid darkgrey;
   font-family: 'Poppins', sans-serif;
+  background-color: rgba(226, 226, 226, 0.516);
 }
 
 #create-area {
@@ -57,11 +56,12 @@ body, html {
 
 #file-container {
   width: 80%;
-  min-height: 500px;
-  background-color: white;
+  min-height: 1000px;
+  background-color: rgba(226, 226, 226, 0.516);
   align-self: center;
   position: relative;
   border-radius: 10px;
+  border: 1px solid darkgrey;
 }
 
 #file-container p {

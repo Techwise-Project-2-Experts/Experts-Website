@@ -71,16 +71,20 @@ function moveFileToContainer() {
     if (imageInDragArea) {
         // Create a new image element
         let newImage = document.createElement('img');
+        let imgCaption = document.createElement('figcaption'); 
         
         // Set the source and alt attributes based on the existing image
         newImage.src = imageInDragArea.src;
         newImage.alt = imageInDragArea.alt;
+        imgCaption.textContent = file.name;
 
         // Add class for styling in the grid
         newImage.classList.add('grid-icon');
+        imgCaption.style.marginLeft = "10%";
 
         // Append the new image to the file-container
         fileContainer.appendChild(newImage);
+        fileContainer.appendChild(imgCaption);
     }
 
     // Return drag area to initial state
