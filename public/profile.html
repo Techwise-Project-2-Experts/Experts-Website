@@ -101,25 +101,25 @@
 
     <main>
 
-      <div class="popup">
+      <div id="user-info-popup" class="hidden popup">
         <div class="overlay"></div>
         <div class="content">
-          <div class="close-btn"></div>
-          <h3></h3>
+          <i class="uil uil-times close-btn"></i>
+          <h3>Edit your details</h3>
           <form action="">
             <label>
               Full Name:
               <input class="edit-form" name="submitted-name" autocomplete="name" />
             </label>
             <label>
-              Full Name:
+              Headline:
               <input class="edit-form" name="submitted-name" autocomplete="name" />
             </label>
             <label>
-              Full Name:
+              Location:
               <input class="edit-form" name="submitted-name" autocomplete="name" />
             </label>
-          <button>Save Changes</button></form>
+          <button class="btn save-btn">Save Changes</button></form>
         </div>
       </div>
 
@@ -130,8 +130,7 @@
           <section id="user-information">
             <div class="my-summary">
               <button id="edit-button">
-                <i class="uil uil-edit">
-              </i>
+                <i class="uil uil-edit"></i>
               </button>
 
               <h1 id="username">Shifu Asokan</h1>
@@ -195,6 +194,16 @@
               <div>
                 <p class="recommendation-name">Austin Sloane</p>
                 <p class="recommendation-description">Software Engineer</p>
+              </div>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-6.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Felipe Rivera</p>
+                <p class="recommendation-description">Software Engineer/TechWise by TalentSprint Mentor</p>
               </div>
             </div>
 

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let editButton = document.getElementById("edit-button");
     let nameHeader = document.getElementById("username");
     let pHeadline = document.getElementById("user-headline");
     let pLocation = document.getElementById("user-location");
@@ -11,8 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     user = JSON.parse(user)
     console.log("From profile.js...")
     console.log(user)
-    let profileInfo = user.profileInfo
-    console.log(profileInfo)
+    let profileInfo = user.profileInfo;
+    console.log(profileInfo);
+
+
+    editButton.addEventListener("click", function(){
+        document.querySelector("#user-info-popup").classList.remove("hidden");
+    })
 
     if(profileInfo){
         console.log(profileInfo);
