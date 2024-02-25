@@ -104,7 +104,7 @@
       <div id="user-info-popup" class="popup">
         <div class="overlay"></div>
         <div class="content">
-          <button class="close-btn">
+          <button class="close-btn" id="close-info">
             <i class="uil uil-times"></i>
           </button>
           <h3>Edit your details</h3>
@@ -129,7 +129,7 @@
       <div id="experience-popup" class="popup">
         <div class="overlay"></div>
         <div class="content">
-          <button class="close-btn">
+          <button class="close-btn" id="close-experience">
             <i class="uil uil-times"></i>
           </button>
           <h3>Add a new Experience</h3>
@@ -143,12 +143,64 @@
               <input class="edit-form" name="company-name" autocomplete="name" />
             </label>
             <label>
-              Time Frame:
-              <input class="edit-form" name="time-fram" autocomplete="name" />
+              Start Date:
+              <input class="edit-form" name="start" type="date" autocomplete="name" />
+            </label>
+            <label>
+              End Date:
+              <input class="edit-form" name="end" type="date" autocomplete="name" />
             </label>
             <label>
               Location:
               <input class="edit-form" name="location" autocomplete="name" />
+            </label>
+          <button class="btn save-btn">Save Changes</button></form>
+        </div>
+      </div>
+
+      <div id="education-popup" class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+          <button class="close-btn" id="close-education">
+            <i class="uil uil-times"></i>
+          </button>
+          <h3>Add new Education</h3>
+          <form action="">
+            <label>
+              School:
+              <input class="edit-form" name="position" autocomplete="name" />
+            </label>
+            <label>
+              Degree/Major:
+              <input class="edit-form" name="company-name" autocomplete="name" />
+            </label>
+            <label>
+              Start Date:
+              <input class="edit-form" name="start" type="date" autocomplete="name" />
+            </label>
+            <label>
+              Completion Date:
+              <input class="edit-form" name="graduation" type="date" autocomplete="name" />
+            </label>
+            <label>
+              Location:
+              <input class="edit-form" name="location" autocomplete="name" />
+            </label>
+          <button class="btn save-btn">Save Changes</button></form>
+        </div>
+      </div>
+
+      <div id="skills-popup" class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+          <button class="close-btn" id="close-skills">
+            <i class="uil uil-times"></i>
+          </button>
+          <h3>Add new Skills</h3>
+          <form action="">
+            <label>
+              Skill:
+              <input class="edit-form" name="position" autocomplete="name" />
             </label>
           <button class="btn save-btn">Save Changes</button></form>
         </div>
@@ -183,7 +235,7 @@
             <div class="section-header">
               <h2>Experience</h2>
               <div class="icons">
-                <button class="add-button">
+                <button class="add-button" id="add-experience">
                   <i class="uil uil-plus"></i>
                 </button>
                 <button class="edit-button" id="edit-experience">
@@ -201,10 +253,10 @@
             <div class="section-header">
               <h2>Education</h2>
               <div class="icons">
-                <button class="add-button">
+                <button class="add-button" id="add-education">
                   <i class="uil uil-plus"></i>
                 </button>
-                <button class="edit-button">
+                <button class="edit-button" id="edit-education">
                   <i class="uil uil-edit"></i>
                 </button>
               </div>
@@ -219,10 +271,10 @@
             <div class="section-header">
             <h2>Skills</h2>
               <div class="icons">
-                <button class="add-button">
+                <button class="add-button" id="add-skills">
                   <i class="uil uil-plus"></i>
                 </button>
-                <button class="edit-button">
+                <button class="edit-button" id="edit-skills">
                   <i class="uil uil-edit"></i>
                 </button>
               </div>
