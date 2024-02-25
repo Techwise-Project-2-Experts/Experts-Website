@@ -1,7 +1,8 @@
 const dragArea = document.querySelector('.drag-area');
 const dragText = document.querySelector('.header'); 
 let button = document.querySelector('.button');
-let input = document.querySelector('input');
+let input = document.querySelector('#upload-popup input');
+let originalDragAreaContent = dragArea.innerHTML; // Variable to store the intial content of dragArea
 let file;
 
 // Triggering the file input when button is clicked
@@ -57,3 +58,62 @@ function displayFile() {
         dragArea.classList.remove('active');
     }
 }
+
+function moveFileToContainer() {
+    let fileContainer = document.getElementById('file-container');
+
+    // Remove existing content from the file-container
+    fileContainer.innerHTML = '';
+
+    // Check for image
+    let imageInDragArea = dragArea.querySelector('img');
+
+    if (imageInDragArea) {
+        // Create a new image element
+        let newImage = document.createElement('img');
+        let imgCaption = document.createElement('figcaption'); 
+        
+        // Set the source and alt attributes based on the existing image
+        newImage.src = imageInDragArea.src;
+        newImage.alt = imageInDragArea.alt;
+        imgCaption.textContent = file.name;
+
+        // Add class for styling in the grid
+        newImage.classList.add('grid-icon');
+        imgCaption.style.marginLeft = "10%";
+        imgCaption.style.fontSize = "100%";
+
+        // Append the new image to the file-container
+        fileContainer.appendChild(newImage);
+        fileContainer.appendChild(imgCaption);
+    }
+
+    // Return drag area to initial state
+    dragArea.innerHTML = originalDragAreaContent;
+}
+
+
+// Close popup and return popup to initial state
+document.getElementById("cancel-drop").addEventListener("click", function () {
+    document.getElementById("upload-popup").classList.remove("show");
+    input.value = null; // Reset the file input value
+    dragArea.classList.remove('active');
+    dragText.textContent = 'Drag & Drop';
+    // Restore the original content of dragArea
+    dragArea.innerHTML = originalDragAreaContent;
+});
+
+// When the user confirms the upload -> move the file from drag area to file container
+document.getElementById("confirm-drop").addEventListener("click", function () {
+    // Temporarily -> store as json file in local
+    console.log(file.name, file);
+    localStorage.setItem(file.name, JSON.stringify(file));
+    moveFileToContainer();
+
+    // Hide the upload popup
+    document.getElementById("upload-popup").classList.remove("show");
+    // Reset the file input value and drag area state
+    input.value = null;
+    dragArea.classList.remove('active');
+    dragText.textContent = 'Drag & Drop';
+});
