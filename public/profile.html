@@ -101,10 +101,12 @@
 
     <main>
 
-      <div id="user-info-popup" class="hidden popup">
+      <div id="user-info-popup" class="popup">
         <div class="overlay"></div>
         <div class="content">
-          <i class="uil uil-times close-btn"></i>
+          <button class="close-btn">
+            <i class="uil uil-times"></i>
+          </button>
           <h3>Edit your details</h3>
           <form action="">
             <label>
@@ -124,12 +126,41 @@
       </div>
 
 
+      <div id="experience-popup" class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+          <button class="close-btn">
+            <i class="uil uil-times"></i>
+          </button>
+          <h3>Add a new Experience</h3>
+          <form action="">
+            <label>
+              Position:
+              <input class="edit-form" name="position" autocomplete="name" />
+            </label>
+            <label>
+              Company Name:
+              <input class="edit-form" name="company-name" autocomplete="name" />
+            </label>
+            <label>
+              Time Frame:
+              <input class="edit-form" name="time-fram" autocomplete="name" />
+            </label>
+            <label>
+              Location:
+              <input class="edit-form" name="location" autocomplete="name" />
+            </label>
+          <button class="btn save-btn">Save Changes</button></form>
+        </div>
+      </div>
+
+
 
       <div class="container">
         <div class="left">
           <section id="user-information">
             <div class="my-summary">
-              <button id="edit-button">
+              <button id="edit-info" class="edit-button">
                 <i class="uil uil-edit"></i>
               </button>
 
@@ -152,8 +183,12 @@
             <div class="section-header">
               <h2>Experience</h2>
               <div class="icons">
-                <i class="uil uil-plus"></i>
-                <i class="uil uil-edit"></i>
+                <button class="add-button">
+                  <i class="uil uil-plus"></i>
+                </button>
+                <button class="edit-button" id="edit-experience">
+                  <i class="uil uil-edit"></i>
+                </button>
               </div>
             </div>
             
@@ -166,8 +201,12 @@
             <div class="section-header">
               <h2>Education</h2>
               <div class="icons">
-                <i class="uil uil-plus"></i>
-                <i class="uil uil-edit"></i>
+                <button class="add-button">
+                  <i class="uil uil-plus"></i>
+                </button>
+                <button class="edit-button">
+                  <i class="uil uil-edit"></i>
+                </button>
               </div>
             </div>
 
@@ -177,7 +216,17 @@
           </section>
 
           <section id="skills">
+            <div class="section-header">
             <h2>Skills</h2>
+              <div class="icons">
+                <button class="add-button">
+                  <i class="uil uil-plus"></i>
+                </button>
+                <button class="edit-button">
+                  <i class="uil uil-edit"></i>
+                </button>
+              </div>
+            </div>
             
           </section>
         </div>
