@@ -63,6 +63,8 @@ body, html {
   position: relative;
   border-radius: 10px;
   border: none;
+  display: flex;
+  flex-direction: row;
 }
 
 #file-container p {

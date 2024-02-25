@@ -11,13 +11,13 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 
 // Triggering the file input when button is clicked
 button.onclick = () => {
+    console.log("Browse button clicked");
     input.click();
 };
 
 // When a file is selected via input
 input.addEventListener('change', function () {
     file = this.files[0];
-    dragArea.classList.add('active');
     displayFile();
 });
 
@@ -42,9 +42,6 @@ dragArea.addEventListener('drop', (event) => {
 });
 
 function renderPdf(pdfData, selectedArea) {
-    /* Using pdf.js to correctly work w/ pdfs:
-        Getting all pages of the pdf and allowing user to scroll through, adding the pdf canvas to selected area */
-
     pdfjsLib.getDocument({ data: pdfData }).promise.then(function(pdf) {
         // Create a container to hold all pages
         let pdfContainer = document.createElement('div');
@@ -90,9 +87,6 @@ function renderPdf(pdfData, selectedArea) {
 }
 
 function displayWordPreview(fileData) {
-    /* Using Mammoth.js to correctly work w/ word documents:
-        Converting word document to HTML and styling container to resemble a scrollable page */
-
     // Create a container element
     let container = document.createElement('div');
     container.classList.add('document-container'); // Add a class for styling
@@ -185,7 +179,7 @@ function moveFileToContainer() {
         let imgCaption = document.createElement('figcaption'); 
 
         imageInDragArea.classList.add('grid-icon');
-        imgCaption.classList.add('grid-icon');
+        //imgCaption.classList.add('grid-icon');
         
         // Set the caption based on the image name
         imgCaption.textContent = file.name;
@@ -205,7 +199,7 @@ function moveFileToContainer() {
         fileInDragArea.classList.add('grid-icon');
 
         previewCaption.textContent = fileInDragArea.name;
-        previewCaption.classList.add('grid-icon');
+        //previewCaption.classList.add('grid-icon');
         previewCaption.style.textAlign = 'center';
         previewCaption.style.fontSize = '30%';
 
@@ -228,8 +222,9 @@ function moveFileToContainer() {
 document.getElementById("cancel-drop").addEventListener("click", function () {
     document.getElementById("upload-popup").classList.remove("show");
     input.value = null; // Reset the file input value
+    file = null;
     dragArea.classList.remove('active');
-    dragText.textContent = 'Drag & Drop';
+    dragText.textContent = originalDragAreaContent;
 });
 
 // When the user confirms the upload -> move the file from drag area to file container
