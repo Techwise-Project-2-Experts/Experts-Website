@@ -172,11 +172,9 @@ function displayFile() {
 
 function moveFileToContainer() {
     // Remove existing content from the file-container
-    if (fileContainer.textContent === "No files in storage. Create a note or upload a file now!") {
-        fileContainer.textContent = '';
+    if (fileContainer.innerText === "No files in storage. Create a note or upload a file now!") {
+        fileContainer.innerText = '';
     };
-
-    fileContainer.textContent = '';
 
     // Check for image
     let imageInDragArea = document.getElementById(`${file.name}_image`);
