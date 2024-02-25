@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box i {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#create-note {
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: hsl(252, 75%, 60%)
+}
+
+.note-choices {
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.title-input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
+}

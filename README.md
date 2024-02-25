@@ -9,3 +9,6 @@
 **Other helpful links:**
  - https://www.youtube.com/watch?v=AiFfDjmd0jU
  - https://www.youtube.com/watch?v=znqUwx0b0HI
+
+ Be sure to install requirements and create .env file.
+ To run server, use the command node server.js

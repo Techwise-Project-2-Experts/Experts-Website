@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="shell.css">
+    
+</head>
+<body>
+
+  <header class="mdc-top-app-bar mdc-top-app-bar--prominent">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="./index.html">
+                <div id="experts-logo-div"></div>
+            </a>
+            <input id="search-bar" type="text" placeholder="Search..">
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <nav id="navLinks" class="mdc-top-app-bar__section space-evenly">
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >info</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                About
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./meetings.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >meeting_room</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                meetings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./notes_and_files.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >edit_note</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Notes
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./console_profile.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >person</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Profile
+                            </span>
+                        </button>
+                    </div>
+                </a>
+                <a href="./aboutus.html">
+                    <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--icon-leading">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon dark-gray font-size-24 header-icon" 
+                            aria-hidden="true"
+                            >settings</i
+                            >
+                            <span class="mdc-button__label gray font-size-24">
+                                Settings
+                            </span>
+                        </button>
+                    </div>
+                </a>
+            </nav>
+        </section>
+    </div>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="left">
+          <section id="user-information">
+            <div class="my-summary">
+              <i class="uil uil-edit"></i>
+              <h1 id="username">Name</h1>
+              <p id="user-headline">Headline</p>
+              <p id="user-location">Location</p>
+            </div>
+
+            <div class="profile-photo">
+              <img src="./images/profile-1.jpg">
+            </div>
+          </section>
+
+          <section class="about">        
+            <h2>About</h2>
+            <p id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi commodi nam nihil deserunt tempore omnis, eos dicta quae corrupti nisi quam nesciunt laboriosam quidem tempora eveniet exercitationem vitae quod nostrum.</p>
+          </section>
+
+          <section id="experience">
+            <div class="section-header">
+              <h2>Experience</h2>
+              <div class="icons">
+                <i class="uil uil-plus"></i>
+                <i class="uil uil-edit"></i>
+              </div>
+            </div>
+            
+            
+
+            
+          </section>
+
+          <section id="education">
+            <div class="section-header">
+              <h2>Education</h2>
+              <div class="icons">
+                <i class="uil uil-plus"></i>
+                <i class="uil uil-edit"></i>
+              </div>
+            </div>
+
+            
+
+
+          </section>
+
+          <section id="skills">
+            <h2>Skills</h2>
+            
+          </section>
+        </div>
+
+
+        <div class="right">
+          <section>
+            <h3 class="section-header--right">People who visited your profile</h3>
+            
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-6.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Austin Sloane</p>
+                <p class="recommendation-description">Software Engineer</p>
+              </div>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-4.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Felipe Rivera</p>
+                <p class="recommendation-description">Software Engineer/TechWise by TalentSprint Mentor</p>
+              </div>
+            </div>
+          </section>
+
+
+
+
+          <section>
+            <h3 class="section-header--right">You should connect with...</h3>
+            
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-2.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Sphoorthy</p>
+                <p class="recommendation-description">Director at TalentSprint</p>
+              </div>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommended-photo">
+                <img src="./images/profile-15.jpg">
+              </div>
+              <div>
+                <p class="recommendation-name">Jeff Bezos</p>
+                <p class="recommendation-description">Chairman of Amazon</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+
+    </main>
+
+    <footer>
+      <div>
+          <a class="no-underline" href="">About</a>
+          <a class="no-underline" href="">Community Guidelines</a>
+          <a class="no-underline" href="">Privacy & Terms</a>
+          <a class="no-underline" href="">Accessibility</a>
+          <a class="no-underline" href="">Mobile</a>
+          <a class="no-underline" href="">FAQ</a>
+      </div>
+      
+      <div id="select-language">
+          <label id="language-label" for="language">Select Language:</label>
+            <select name="language" id="language">
+              <option value="English">English</option>
+              <option value="Spanish">Espanol</option>
+            </select>
+        </div>
+    </footer>
+    <script src="profile.js"></script>
+</body>
+</html>
