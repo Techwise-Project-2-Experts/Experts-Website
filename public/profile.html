@@ -106,20 +106,20 @@
         <div class="content">
           <i class="uil uil-times close-btn"></i>
           <h3>Edit your details</h3>
-          <form action="">
+          <form action="/profile" method="post" id="profileHeaderForm">
             <label>
               Full Name:
-              <input class="edit-form" name="submitted-name" autocomplete="name" />
+              <input class="edit-form" id="input-full-name" name="submitted-name" autocomplete="name" />
             </label>
             <label>
               Headline:
-              <input class="edit-form" name="submitted-name" autocomplete="name" />
+              <input class="edit-form" id="input-headline" name="submitted-name" autocomplete="name" />
             </label>
             <label>
               Location:
-              <input class="edit-form" name="submitted-name" autocomplete="name" />
+              <input class="edit-form" id="input-location" name="submitted-name" autocomplete="name" />
             </label>
-          <button class="btn save-btn">Save Changes</button></form>
+          <button type="submit" id="submitProfileHeaderForm" class="btn save-btn">Save Changes</button></form>
         </div>
       </div>
 

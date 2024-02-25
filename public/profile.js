@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     editButton.addEventListener("click", function(){
+        console.log("I got clicked!")
         document.querySelector("#user-info-popup").classList.remove("hidden");
     })
 
@@ -41,5 +42,34 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log("profile.js: Profile information not available.")
     }
+
+    document.getElementById("profileHeaderForm").addEventListener("submit", async function(event){
+        event.preventDefault(); 
+        let fullNameValue = document.getElementById("input-full-name").value;
+        let headlineValue = document.getElementById("input-headline").value;
+        let locationValue = document.getElementById("input-location").value;
+        
+        if (fullNameValue != ""){
+        nameHeader.innerText = user.profileInfo.fullName = fullNameValue
+        }
+        if (headlineValue != ""){
+        pHeadline.innerText = user.profileInfo.headline = headlineValue
+        }
+        if (locationValue){
+        pLocation.innerText = user.profileInfo.location = locationValue
+        }
+
+        try{
+            const response = await fetch('/login',{
+              method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            });
+        } catch(error){
+            console.error('Error:', error);
+        }
+    });
 
 });

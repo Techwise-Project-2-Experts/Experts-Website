@@ -42,7 +42,13 @@ app.get("/profile", (req, res)=>{
 })
 
 app.get("/login", (req, res)=>{
+    sessionStorage.clear();
     res.sendFile("login.html");
+})
+
+app.get("/signup", (req, res)=>{
+    sessionStorage.clear();
+    res.sendFile("signup.html");
 })
 
 
@@ -62,8 +68,38 @@ app.post("/signup", async (req, res)=>{
     if (result.matchedCount > 0){
         res.json({ status: 'error', message: 'Email already in use. Try another email.' });
     }else{
-    console.log("Redirecting...");
-    res.redirect("/console");
+        let newUser = {
+            email: data.email,
+            username: "",
+            posts: [],
+            connections: [],
+            profileInfo: null,
+            files: []
+         }
+         const filter = { email: data.email };
+        const update = {
+        $setOnInsert: newUser
+        }
+         
+        const insertResponse = await userCollection.updateOne(filter, update, {upsert: true})
+        console.log("Redirecting...");
+        res.redirect("/console");
+    }
+})
+
+app.post("/profile", async (req, res) =>{
+    const user = req.body
+    const filter = { email: user.profileInfo.email };
+    const update = {
+        $setOnInsert: user
+    }
+
+    const result = await collection.updateOne(filter, update );
+
+    if (result.matchedCount == 0){
+        res.json({ status: 'error', message: 'Terrible Error. User profile not found' });
+    }else {
+        console.log("Update Successful")
     }
 })
 

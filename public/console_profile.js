@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    let mainFeed = this.getElementById("main-feed");
+    let user = sessionStorage.getItem('user');
+    user = JSON.parse(user);
+
+    console.log("From console_profile.js...")
+    console.log(user)
+    let posts = user.posts
+    console.log(posts)
+
+    if(posts){
+        for ( const post of posts){
+        mainFeed.innerHTML += post;
+        }
+    }
+
+});
+
 // SIDEBAR
 const menuItems = document.querySelectorAll('.menu-item');
 
