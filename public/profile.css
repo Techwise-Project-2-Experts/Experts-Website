@@ -33,6 +33,19 @@ main {
     padding-top: 30px;
 }
 
+.hidden {
+    display: none;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -69,6 +82,76 @@ main {
     justify-content: space-between;
     padding-top: 10px;
     padding-inline: 30px;
+}
+
+#edit-button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.popup .content h3 {
+    margin-block: 5px;
+}
+
+.popup .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popup .content .edit-form {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    margin-block: 5px;
+}
+
+.popup .content .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--color-black);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup .content .save-btn {
+    position: relative;
+    top: 20px;
+    width: auto;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
 }
 
 #username {
@@ -174,11 +257,11 @@ img{
     margin-inline: 15px;
     margin-bottom: 15px;
     border-bottom: solid 1px rgb(222, 222, 222);
-    gap: 30px;
+    gap: 40px;
 }
 
 .recommended-photo {
-    width: 4.5rem;  
+    width: 60px;  
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
