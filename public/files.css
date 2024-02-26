@@ -56,13 +56,15 @@ body, html {
 }
 
 #file-container {
-  width: 80%;
+  width: 90%;
   min-height: 1000px;
   background-color: white;
   align-self: center;
   position: relative;
   border-radius: 10px;
   border: none;
+  display: flex;
+  flex-direction: row;
 }
 
 #file-container p {
@@ -116,4 +118,9 @@ body, html {
   width: 25%;
   height: 25%;
   margin: 5px;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
 }
