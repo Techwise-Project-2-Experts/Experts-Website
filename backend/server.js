@@ -89,15 +89,17 @@ app.post("/signup", async (req, res)=>{
 
 app.post("/profile", async (req, res) =>{
     const user = req.body
-    const filter = { email: user.profileInfo.email };
+    console.log(user)
+    const filter = { email: user.email };
+    console.log(user.email);
     const update = {
-        $setOnInsert: user
+        $set: user
     }
 
-    const result = await collection.updateOne(filter, update );
+    const result = await userCollection.updateOne(filter, update );
 
     if (result.matchedCount == 0){
-        res.json({ status: 'error', message: 'Terrible Error. User profile not found' });
+        console.log('Terrible Error. User profile not found' );
     }else {
         console.log("Update Successful")
     }

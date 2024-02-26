@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try{
-            const response = await fetch('/login',{
+            const response = await fetch('/profile',{
               method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
