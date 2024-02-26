@@ -91,14 +91,14 @@ img{
 }
 
 /*=======NAVBAR======*/
-nav{
+/* nav{
   width: 100%;
   background: var(--color-white);
   padding: 0.7rem 0;
   position: fixed;
   top: 0;
   z-index: 10;
-}
+} */
 
 nav .container{
   display: flex;
@@ -134,6 +134,7 @@ nav .create{
 main {
   position: relative;
   top: 5.4rem;
+  padding-top: 64px;
 }
 
 main .container {
