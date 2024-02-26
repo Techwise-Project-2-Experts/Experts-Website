@@ -63,6 +63,7 @@ function renderPdf(pdfData, selectedArea) {
         pdfContainer.style.overflow = 'auto'; // Enable scrolling
         pdfContainer.id = `${file.name}_doc`;
         pdfContainer.name = file.name;
+        pdfContainer.style.border = '1px solid #ccc';
 
         let promises = []; // Array to store promises for rendering each page
 
@@ -107,10 +108,9 @@ function displayWordPreview(fileData) {
 
     // CSS styles for the document container
     container.style.backgroundColor = 'white';
-    container.style.padding = '20px';
     container.style.fontSize = '10px';
     container.style.border = '1px solid #ccc';
-    container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+    container.style.height = '200px';
     container.style.overflowX = 'auto'; // Enable horizontal scrolling
 
 
@@ -147,6 +147,7 @@ function displayFile() {
             imageObject.alt = 'Image preview';
             imageObject.width = '400px';
             imageObject.id = `${file.name}_image`;
+            imageObject.style.border = '1px solid #ccc';
 
             dragArea.innerHTML = '';
             dragArea.appendChild(imageObject);
@@ -190,44 +191,37 @@ function moveFileToContainer() {
 
     if (imageInDragArea) {
         // Create a new image element
-        let imgCaption = document.createElement('figcaption'); 
+        let fileItem = document.createElement('div');
+        let imgCaption = document.createElement('div'); 
 
-        imageInDragArea.classList.add('grid-icon');
-        //imgCaption.classList.add('grid-icon');
+        fileItem.classList.add('file-item');
+        imageInDragArea.classList.add('file-preview');
+        imgCaption.classList.add('file-caption');
         
         // Set the caption based on the image name
         imgCaption.textContent = file.name;
 
-        // Add class for styling in the grid
-        imgCaption.style.textAlign = 'center';
-        imgCaption.style.fontSize = "30%";
+        fileItem.appendChild(imageInDragArea);
+        fileItem.appendChild(imgCaption);
 
-        // Append the new image to the file-container
-        fileContainer.appendChild(imageInDragArea);
-        fileContainer.appendChild(imgCaption);
+        fileContainer.appendChild(fileItem);
     }
 
     else if (fileInDragArea) {
         console.log("File in drag area -- transferring");
-        let previewCaption = document.createElement('figcaption');
-        fileInDragArea.classList.add('grid-icon');
+        let fileItem = document.createElement('div');
+        let previewCaption = document.createElement('div');
+
+        fileItem.classList.add('file-item');
+        fileInDragArea.classList.add('file-preview');
+        previewCaption.classList.add('file-caption');
 
         previewCaption.textContent = fileInDragArea.name;
-        //previewCaption.classList.add('grid-icon');
-        previewCaption.style.textAlign = 'center';
-        previewCaption.style.fontSize = '30%';
 
-        // Get the height of the file container
-        let fileContainerHeight = fileContainer.offsetHeight;
-
-        // Set the height of the file documents to 25% of the file container height
-        fileInDragArea.style.height = (fileContainerHeight * 0.25) + 'px';
+        fileItem.appendChild(fileInDragArea);
+        fileItem.appendChild(previewCaption);
         
-        console.log(fileInDragArea);
-        fileContainer.appendChild(fileInDragArea);
-
-        console.log("transferred");
-        fileContainer.appendChild(previewCaption);
+        fileContainer.appendChild(fileItem);
     }
 }
 
