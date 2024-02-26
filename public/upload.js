@@ -1,3 +1,17 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyD8hiqddvzKddH6AklHiuKBnNTJHjlvhe4",
+    authDomain: "expertswebsite-de33c.firebaseapp.com",
+    projectId: "expertswebsite-de33c",
+    storageBucket: "expertswebsite-de33c.appspot.com",
+    messagingSenderId: "300053268179",
+    appId: "1:300053268179:web:b8ca48466d1ae376443626",
+    measurementId: "G-KL6LR1T4PB"
+};
+  
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 const dragArea = document.querySelector('.drag-area');
 const dragText = document.querySelector('.header'); 
 let button = document.querySelector('.button');
@@ -217,6 +231,38 @@ function moveFileToContainer() {
     }
 }
 
+// Function to upload file to Firebase Storage
+function uploadFileToFirebase(file) {
+    let storageRef = firebase.storage().ref(`uploads/${file.name}`);
+    let uploadTask = storageRef.put(file);
+
+    uploadTask.on('state_changed',
+        (snapshot) => {
+            // Handling state changes, e.g., paused, running, but not displaying percentages
+            switch (snapshot.state) {
+                case firebase.storage.TaskState.PAUSED:
+                    console.log('Upload is paused');
+                    break;
+                case firebase.storage.TaskState.RUNNING:
+                    console.log('Upload is running');
+                    break;
+            }
+        },
+        (error) => {
+            // Handle unsuccessful uploads
+            console.log(error);
+        },
+        () => {
+            // Handle successful uploads on complete
+            // For instance, get the download URL
+            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                console.log('File available at', downloadURL);
+                // Here you can, for example, display the image or file from the URL if needed
+            });
+        }
+    );
+}
+
 
 // Close popup and return popup to initial state
 document.getElementById("cancel-drop").addEventListener("click", function () {
@@ -230,7 +276,7 @@ document.getElementById("cancel-drop").addEventListener("click", function () {
 // When the user confirms the upload -> move the file from drag area to file container
 document.getElementById("confirm-drop").addEventListener("click", function () {
     console.log(file.name, file);
-    localStorage.setItem(file.name, JSON.stringify(file));
+    uploadFileToFirebase(file); // Added line for uploading to Firebase    
     moveFileToContainer();
 
     // Hide the upload popup
@@ -249,14 +295,12 @@ document.getElementById("confirm-drop").addEventListener("click", function () {
     dragArea.classList.remove('active');
 });
 
-
 // shows popup when user selects upload
 document.getElementById("upload-button").addEventListener("click", function () {
     document.getElementById("upload-popup").classList.add("show");
     dragArea.classList.add('active');
   });
-  
-  
+
 // hides popup when user clicks outside of it
 window.addEventListener("click", function (event) {
     var uploadPopup = document.getElementById("upload-popup");
